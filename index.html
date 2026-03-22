@@ -1,0 +1,1030 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Calculadora Bolsa Família 2025</title>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@700;800;900&family=Nunito+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root {
+  --azul:     #1155BB;
+  --azul-esc: #0D3D8A;
+  --azul-cl:  #E8F0FB;
+  --verde:    #1A7A4A;
+  --verde-cl: #E6F5EE;
+  --verde-md: #28A860;
+  --verm:     #C02020;
+  --verm-cl:  #FDEAEA;
+  --laranja:  #D06010;
+  --lar-cl:   #FEF0E0;
+  --teal:     #1A6B5E;
+  --teal-cl:  #E3F4F1;
+  --cinza:    #F4F4F4;
+  --cinza2:   #E0E0E0;
+  --cinza3:   #999;
+  --branco:   #FFFFFF;
+  --texto:    #1A1A1A;
+  --sombra:   0 3px 16px rgba(0,0,0,0.09);
+  --sombra2:  0 6px 28px rgba(0,0,0,0.13);
+  --r:        20px;
+  --r2:       14px;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  background: #E8EFF8;
+  color: var(--texto);
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 17px;
+  line-height: 1.5;
+  -webkit-text-size-adjust: 100%;
+}
+
+/* ══ MARCA CONECTA SOCIAL ════════════════════════════════════════ */
+.marca-bar {
+  background: #0A2E6A;
+  padding: 10px 20px;
+  display: flex; align-items: center; justify-content: center; gap: 12px;
+  border-bottom: 3px solid #F9C74F;
+}
+.marca-logo {
+  display: flex; align-items: center; gap: 10px;
+}
+.marca-icone {
+  width: 38px; height: 38px;
+  background: linear-gradient(135deg, #1A7A4A, #28A860);
+  border-radius: 10px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 20px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+  flex-shrink: 0;
+}
+.marca-nome {
+  font-family: 'Nunito', sans-serif;
+  font-size: clamp(20px, 5vw, 28px);
+  font-weight: 900;
+  color: #FFF;
+  letter-spacing: -0.5px;
+  line-height: 1;
+}
+.marca-nome span {
+  color: #F9C74F;
+}
+.marca-divisor {
+  width: 2px; height: 32px;
+  background: rgba(255,255,255,0.25);
+  border-radius: 2px;
+}
+.marca-tag {
+  font-size: 12px; font-weight: 800;
+  color: rgba(255,255,255,0.65);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  line-height: 1.3;
+}
+.marca-tag strong {
+  display: block;
+  font-size: 13px;
+  color: rgba(255,255,255,0.9);
+}
+
+/* ══ TOPO ════════════════════════════════════════════════════════ */
+.topo {
+  background: linear-gradient(150deg, #0D3D8A 0%, #1155BB 55%, #1A7A4A 100%);
+  padding: 28px 20px 28px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.topo::after {
+  content: '';
+  position: absolute; bottom: 0; left: 0; right: 0; height: 5px;
+  background: linear-gradient(90deg, #27AE60, #F9C74F, #27AE60);
+}
+.topo-flag { font-size: 50px; display: block; margin-bottom: 10px; }
+.topo h1 {
+  font-family: 'Nunito', sans-serif;
+  font-size: clamp(28px, 7vw, 44px);
+  font-weight: 900; color: #FFF;
+  line-height: 1.15; letter-spacing: -0.5px;
+  margin-bottom: 10px;
+}
+.topo-sub {
+  color: rgba(255,255,255,0.88);
+  font-size: clamp(15px, 3.5vw, 19px);
+  font-weight: 700;
+  max-width: 500px; margin: 0 auto 18px;
+}
+.topo-selos { display: flex; gap: 8px; justify-content: center; flex-wrap: wrap; }
+.topo-selo {
+  background: rgba(255,255,255,0.15);
+  border: 2px solid rgba(255,255,255,0.3);
+  color: #FFF; font-family: 'Nunito', sans-serif;
+  font-size: 13px; font-weight: 800;
+  padding: 5px 13px; border-radius: 30px;
+}
+
+/* ══ PÁGINA ══════════════════════════════════════════════════════ */
+.pg { max-width: 700px; margin: 0 auto; padding: 24px 14px 60px; }
+
+/* ══ BLOCO ═══════════════════════════════════════════════════════ */
+.bloco {
+  background: var(--branco);
+  border-radius: var(--r);
+  box-shadow: var(--sombra);
+  margin-bottom: 20px;
+  overflow: hidden;
+  border: 3px solid transparent;
+}
+.bloco-resultado { border-color: var(--verde-md); }
+.bloco-cab {
+  display: flex; align-items: center; gap: 14px;
+  padding: 18px 22px;
+}
+.bloco-cab.azul  { background: var(--azul-cl);  border-bottom: 2px solid #C0D0F0; }
+.bloco-cab.verde { background: var(--verde-cl); border-bottom: 2px solid #A0D8B8; }
+.num-passo {
+  width: 52px; height: 52px; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-family: 'Nunito', sans-serif;
+  font-size: 26px; font-weight: 900; color: #FFF; flex-shrink: 0;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+}
+.num-passo.azul  { background: var(--azul); }
+.num-passo.verde { background: var(--verde); }
+.bloco-cab-titulo {
+  font-family: 'Nunito', sans-serif;
+  font-size: clamp(17px, 4vw, 22px); font-weight: 900; line-height: 1.2;
+}
+.azul  .bloco-cab-titulo { color: var(--azul-esc); }
+.verde .bloco-cab-titulo { color: var(--verde); }
+.bloco-cab-dica { font-size: 14px; font-weight: 700; margin-top: 3px; color: #5570A0; }
+.verde .bloco-cab-dica { color: #2A6A40; }
+.bloco-corpo { padding: 22px; }
+
+/* ══ CAMPO RENDA ═════════════════════════════════════════════════ */
+.label-campo {
+  font-family: 'Nunito', sans-serif;
+  font-size: 19px; font-weight: 900;
+  color: var(--texto); margin-bottom: 10px;
+  display: flex; align-items: center; gap: 8px;
+}
+
+/* ── Botão SEM RENDA ─────────────────────────────────────────── */
+.btn-sem-renda {
+  width: 100%;
+  display: flex; align-items: center; gap: 16px;
+  background: var(--cinza);
+  border: 3px solid var(--cinza2);
+  border-radius: var(--r2);
+  padding: 16px 20px;
+  cursor: pointer;
+  transition: all .2s;
+  margin-bottom: 14px;
+  -webkit-tap-highlight-color: transparent;
+  text-align: left;
+}
+.btn-sem-renda:hover { border-color: var(--azul); background: var(--azul-cl); }
+.btn-sem-renda.marcado {
+  background: #FFF3E0;
+  border-color: var(--laranja);
+  box-shadow: 0 0 0 4px rgba(208,96,16,0.12);
+}
+.bsr-check {
+  width: 36px; height: 36px; border-radius: 50%; flex-shrink: 0;
+  border: 3px solid var(--cinza2);
+  background: var(--branco);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 20px;
+  transition: all .2s;
+}
+.btn-sem-renda.marcado .bsr-check {
+  background: var(--laranja);
+  border-color: var(--laranja);
+  color: #FFF;
+}
+.bsr-texto {}
+.bsr-titulo {
+  font-family: 'Nunito', sans-serif;
+  font-size: clamp(16px, 4vw, 20px); font-weight: 900;
+  color: var(--texto); line-height: 1.2;
+}
+.btn-sem-renda.marcado .bsr-titulo { color: var(--laranja); }
+.bsr-desc { font-size: 14px; font-weight: 700; color: var(--cinza3); margin-top: 3px; }
+.btn-sem-renda.marcado .bsr-desc { color: #A05010; }
+
+/* Divisor OU */
+.divisor-ou {
+  display: flex; align-items: center; gap: 12px;
+  margin-bottom: 14px;
+}
+.divisor-linha { flex: 1; height: 2px; background: var(--cinza2); }
+.divisor-txt {
+  font-family: 'Nunito', sans-serif;
+  font-size: 14px; font-weight: 900;
+  color: var(--cinza3); padding: 0 4px;
+  letter-spacing: 1px;
+}
+
+.input-renda-wrap {
+  display: flex; align-items: stretch;
+  border: 3px solid var(--cinza2);
+  border-radius: var(--r2); overflow: hidden;
+  transition: border-color .2s, box-shadow .2s;
+}
+.input-renda-wrap:focus-within {
+  border-color: var(--azul);
+  box-shadow: 0 0 0 4px rgba(17,85,187,0.12);
+}
+.input-renda-wrap.bloqueado {
+  opacity: 0.4; pointer-events: none;
+}
+.input-rs {
+  background: var(--azul); color: #FFF;
+  font-family: 'Nunito', sans-serif;
+  font-size: 22px; font-weight: 900;
+  padding: 14px 18px; flex-shrink: 0;
+  display: flex; align-items: center;
+}
+.input-renda-wrap input {
+  flex: 1; border: none; outline: none;
+  font-family: 'Nunito', sans-serif;
+  font-size: clamp(26px, 6vw, 36px); font-weight: 900;
+  color: var(--texto); padding: 14px 16px;
+  background: var(--cinza); min-width: 0;
+  -moz-appearance: textfield;
+}
+.input-renda-wrap input::placeholder { color: #CCC; }
+.input-renda-wrap input::-webkit-outer-spin-button,
+.input-renda-wrap input::-webkit-inner-spin-button { -webkit-appearance: none; }
+
+.dica-renda {
+  background: var(--lar-cl);
+  border-left: 5px solid var(--laranja);
+  border-radius: 0 var(--r2) var(--r2) 0;
+  padding: 13px 16px; margin-top: 13px;
+}
+.dica-renda p { font-size: 15px; font-weight: 700; color: #7A4010; line-height: 1.6; }
+.dica-renda strong { color: var(--laranja); }
+
+/* RPC badge */
+.rpc-badge {
+  display: none; align-items: center; gap: 14px;
+  margin-top: 13px; padding: 14px 18px;
+  border-radius: var(--r2); border: 3px solid var(--cinza2);
+  background: var(--cinza);
+}
+.rpc-badge.ok  { background: var(--verde-cl); border-color: #90CCAA; }
+.rpc-badge.nao { background: var(--verm-cl);  border-color: #E09090; }
+.rpc-badge.zero { background: var(--teal-cl); border-color: #80C4B8; }
+.rpc-ico { font-size: 32px; flex-shrink: 0; }
+.rpc-rot {
+  font-size: 12px; font-weight: 800;
+  text-transform: uppercase; letter-spacing: 0.8px;
+  color: var(--cinza3); margin-bottom: 2px;
+}
+.rpc-badge.ok   .rpc-rot { color: var(--verde); }
+.rpc-badge.nao  .rpc-rot { color: var(--verm); }
+.rpc-badge.zero .rpc-rot { color: var(--teal); }
+.rpc-val {
+  font-family: 'Nunito', sans-serif;
+  font-size: clamp(20px, 5vw, 28px); font-weight: 900;
+}
+.rpc-badge.ok   .rpc-val { color: var(--verde); }
+.rpc-badge.nao  .rpc-val { color: var(--verm); }
+.rpc-badge.zero .rpc-val { color: var(--teal); }
+.rpc-msg { font-size: 14px; font-weight: 700; margin-top: 2px; }
+.rpc-badge.ok   .rpc-msg { color: #1A6040; }
+.rpc-badge.nao  .rpc-msg { color: #901818; }
+.rpc-badge.zero .rpc-msg { color: var(--teal); }
+
+/* ══ MEMBROS ═════════════════════════════════════════════════════ */
+.membro {
+  display: flex; align-items: center; gap: 14px;
+  padding: 16px 18px;
+  background: var(--cinza); border: 3px solid var(--cinza2);
+  border-radius: var(--r2); margin-bottom: 12px;
+  transition: background .2s, border-color .2s;
+}
+.membro:last-of-type { margin-bottom: 0; }
+.membro.ativo { background: var(--verde-cl); border-color: #80C898; }
+.mem-emoji { font-size: 38px; flex-shrink: 0; line-height: 1; }
+.mem-info  { flex: 1; min-width: 0; }
+.mem-nome  {
+  font-family: 'Nunito', sans-serif;
+  font-size: clamp(15px, 3.8vw, 19px); font-weight: 900;
+  color: var(--texto); line-height: 1.2;
+}
+.mem-valor { font-size: 14px; font-weight: 800; color: var(--cinza3); margin-top: 3px; }
+.membro.ativo .mem-valor { color: var(--verde); }
+.ctr { display: flex; align-items: center; gap: 8px; flex-shrink: 0; }
+.ctr-btn {
+  width: 50px; height: 50px; border-radius: 50%;
+  border: 3px solid var(--azul);
+  background: var(--branco); color: var(--azul);
+  font-family: 'Nunito', sans-serif;
+  font-size: 30px; font-weight: 900; cursor: pointer; user-select: none;
+  display: flex; align-items: center; justify-content: center;
+  transition: all .15s; line-height: 1;
+  box-shadow: 0 2px 8px rgba(17,85,187,0.15);
+  -webkit-tap-highlight-color: transparent;
+}
+.ctr-btn:hover, .ctr-btn:active { background: var(--azul); color: #FFF; transform: scale(1.1); }
+.ctr-num {
+  min-width: 38px; text-align: center;
+  font-family: 'Nunito', sans-serif; font-size: 30px; font-weight: 900;
+}
+.membro.ativo .ctr-num { color: var(--verde); }
+
+.total-casa {
+  display: flex; align-items: center; justify-content: space-between;
+  background: var(--azul); color: #FFF;
+  border-radius: var(--r2); padding: 16px 20px; margin-top: 16px;
+}
+.tc-label { font-size: clamp(14px, 3vw, 17px); font-weight: 800; display: flex; align-items: center; gap: 8px; }
+.tc-num   { font-family: 'Nunito', sans-serif; font-size: 36px; font-weight: 900; }
+
+/* ══ RESULTADO ═══════════════════════════════════════════════════ */
+.banner {
+  border-radius: var(--r); padding: 22px; margin-bottom: 18px;
+  display: flex; align-items: flex-start; gap: 16px;
+  box-shadow: var(--sombra2);
+}
+.banner.ok     { background: linear-gradient(135deg, #1A7A4A, #28A860); }
+.banner.nao    { background: linear-gradient(135deg, #901818, #C02020); }
+.banner.espera { background: linear-gradient(135deg, #555, #888); }
+.ban-ico { font-size: 48px; flex-shrink: 0; filter: drop-shadow(0 2px 5px rgba(0,0,0,.3)); }
+.ban-titulo {
+  font-family: 'Nunito', sans-serif;
+  font-size: clamp(18px, 4.5vw, 26px); font-weight: 900;
+  color: #FFF; line-height: 1.2; margin-bottom: 6px;
+}
+.ban-desc {
+  font-size: clamp(14px, 3vw, 16px); font-weight: 700;
+  color: rgba(255,255,255,0.92); line-height: 1.55;
+}
+.ban-desc strong { color: #FFF; }
+
+/* Card composição */
+.card-comp {
+  background: var(--branco); border: 3px solid var(--verde-md);
+  border-radius: var(--r); overflow: hidden;
+  box-shadow: var(--sombra2); margin-bottom: 18px;
+}
+.comp-cab {
+  background: var(--verde); padding: 16px 22px;
+  display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px;
+}
+.comp-cab-titulo {
+  font-family: 'Nunito', sans-serif;
+  font-size: clamp(16px, 4vw, 20px); font-weight: 900; color: #FFF;
+  display: flex; align-items: center; gap: 8px;
+}
+.comp-cab-tag {
+  background: rgba(255,255,255,0.22); border: 2px solid rgba(255,255,255,0.35);
+  color: #FFF; font-family: 'Nunito', sans-serif;
+  font-size: 14px; font-weight: 900;
+  padding: 5px 14px; border-radius: 30px; white-space: nowrap;
+}
+
+/* Linhas */
+.linha {
+  display: flex; align-items: center; gap: 14px;
+  padding: 16px 22px; border-bottom: 2px solid var(--cinza);
+  transition: background .15s;
+}
+.linha:hover { background: var(--cinza); }
+.linha-ico {
+  width: 50px; height: 50px; border-radius: 14px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 24px; flex-shrink: 0;
+}
+.linha-centro { flex: 1; min-width: 0; }
+.linha-nome {
+  font-family: 'Nunito', sans-serif;
+  font-size: clamp(14px, 3.5vw, 18px); font-weight: 900;
+  color: var(--texto); line-height: 1.2;
+}
+.linha-desc { font-size: clamp(12px, 2.8vw, 15px); font-weight: 700; color: #666; margin-top: 3px; }
+.linha-valor {
+  font-family: 'Nunito', sans-serif;
+  font-size: clamp(20px, 5vw, 28px); font-weight: 900;
+  color: var(--verde); white-space: nowrap; text-align: right;
+}
+.linha-valor.comp-cor { color: var(--teal); }
+
+/* Subtotal / separadores */
+.subtotal-linha {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 10px 22px; background: #F8FCF9;
+  border-bottom: 2px solid var(--cinza2);
+}
+.subtotal-txt { font-size: 14px; font-weight: 800; color: #666; }
+.subtotal-val { font-family: 'Nunito', sans-serif; font-size: 16px; font-weight: 900; color: #888; }
+
+.sep-variavel {
+  display: flex; align-items: center; gap: 0;
+  background: var(--cinza); border-bottom: 2px solid var(--cinza2);
+  padding: 0 22px;
+}
+.sep-linha { flex: 1; height: 2px; background: var(--verde-md); }
+.sep-txt {
+  font-family: 'Nunito', sans-serif; font-size: 12px; font-weight: 900;
+  color: var(--verde); padding: 8px 12px;
+  text-transform: uppercase; letter-spacing: 0.5px; white-space: nowrap;
+}
+
+/* Total grande */
+.total-grande {
+  background: linear-gradient(135deg, var(--verde), #28A860);
+  padding: 22px 24px;
+  display: flex; align-items: center; justify-content: space-between;
+  flex-wrap: wrap; gap: 12px;
+}
+.tg-label {
+  font-family: 'Nunito', sans-serif;
+  font-size: clamp(16px, 4vw, 22px); font-weight: 900; color: #FFF;
+  display: flex; align-items: center; gap: 8px;
+}
+.tg-nota { font-size: 13px; font-weight: 700; color: rgba(255,255,255,0.82); margin-top: 4px; }
+.tg-valor {
+  font-family: 'Nunito', sans-serif;
+  font-size: clamp(36px, 9vw, 56px); font-weight: 900; color: #FFF;
+  text-shadow: 0 3px 12px rgba(0,0,0,.25); white-space: nowrap;
+}
+
+/* Barra visual */
+.barra-visual {
+  background: var(--branco); border-radius: var(--r);
+  padding: 20px 22px; box-shadow: var(--sombra); margin-bottom: 18px;
+}
+.bv-titulo {
+  font-family: 'Nunito', sans-serif; font-size: 18px; font-weight: 900;
+  color: var(--texto); margin-bottom: 14px;
+  display: flex; align-items: center; gap: 8px;
+}
+.bv-row { display: flex; align-items: center; gap: 10px; margin-bottom: 10px; }
+.bv-row:last-child { margin-bottom: 0; }
+.bv-ico { font-size: 22px; flex-shrink: 0; }
+.bv-label { font-size: 13px; font-weight: 800; color: #444; width: 95px; flex-shrink: 0; line-height: 1.2; }
+.bv-track { flex: 1; height: 30px; background: var(--cinza2); border-radius: 15px; overflow: hidden; }
+.bv-fill {
+  height: 100%; border-radius: 15px;
+  display: flex; align-items: center; padding-left: 12px;
+  font-family: 'Nunito', sans-serif; font-size: 13px; font-weight: 900; color: #FFF;
+  white-space: nowrap; overflow: hidden;
+  transition: width .7s cubic-bezier(.4,0,.2,1); min-width: 6px;
+}
+.bv-pct { font-size: 14px; font-weight: 900; color: #555; width: 40px; text-align: right; flex-shrink: 0; }
+
+/* Condicionalidades */
+.cond-bloco {
+  background: var(--branco); border-radius: var(--r);
+  padding: 20px 22px; box-shadow: var(--sombra); margin-bottom: 18px;
+}
+.cond-titulo {
+  font-family: 'Nunito', sans-serif; font-size: 19px; font-weight: 900;
+  color: var(--texto); margin-bottom: 14px;
+  display: flex; align-items: center; gap: 8px;
+}
+.cond-item {
+  display: flex; align-items: flex-start; gap: 14px;
+  padding: 14px 16px; background: var(--cinza);
+  border-left: 5px solid var(--azul);
+  border-radius: 0 var(--r2) var(--r2) 0; margin-bottom: 10px;
+}
+.cond-item:last-child { margin-bottom: 0; }
+.cond-ico { font-size: 26px; flex-shrink: 0; margin-top: 1px; }
+.cond-txt { font-size: clamp(14px, 3vw, 16px); font-weight: 700; color: var(--texto); line-height: 1.6; }
+.cond-txt strong { color: var(--azul); }
+
+/* Aviso */
+.aviso {
+  background: var(--lar-cl); border: 3px solid var(--laranja);
+  border-radius: var(--r2); padding: 16px 18px;
+  display: flex; gap: 12px; align-items: flex-start;
+}
+.aviso-ico { font-size: 28px; flex-shrink: 0; }
+.aviso-txt { font-size: 15px; font-weight: 700; color: #7A3C08; line-height: 1.65; }
+.aviso-txt strong { color: var(--laranja); font-size: 16px; }
+
+/* Estado vazio */
+#estado-vazio { text-align: center; padding: 36px 20px; }
+.ev-ico   { font-size: 60px; display: block; margin-bottom: 12px; }
+.ev-titulo { font-family: 'Nunito', sans-serif; font-size: 22px; font-weight: 900; color: var(--cinza3); margin-bottom: 8px; }
+.ev-desc  { font-size: 16px; font-weight: 700; color: var(--cinza3); }
+
+.aparecer { animation: ap .35s ease both; }
+@keyframes ap { from { opacity:0; transform:translateY(8px); } to { opacity:1; transform:none; } }
+
+@media (max-width: 480px) {
+  .bloco-corpo { padding: 16px 14px; }
+  .linha { padding: 14px 14px; }
+  .comp-cab, .total-grande { padding: 14px 14px; }
+  .bv-label { width: 75px; }
+}
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-thumb { background: var(--cinza2); border-radius: 3px; }
+</style>
+</head>
+<body>
+
+<!-- ══ MARCA CONECTA SOCIAL ══════════════════════════════════════ -->
+<div class="marca-bar">
+  <div class="marca-logo">
+    <div class="marca-icone">🔗</div>
+    <div class="marca-nome">Conecta<span>Social</span></div>
+  </div>
+  <div class="marca-divisor"></div>
+  <div class="marca-tag">
+    FERRAMENTA OFICIAL
+    <strong>GESTÃO SOCIOASSISTENCIAL</strong>
+  </div>
+</div>
+
+<!-- TOPO -->
+<div class="topo">
+  <span class="topo-flag">🇧🇷</span>
+  <h1>CALCULADORA<br>BOLSA FAMÍLIA</h1>
+  <p class="topo-sub">DESCUBRA O VALOR DO BENEFÍCIO DA SUA FAMÍLIA EM POUCOS PASSOS</p>
+  <div class="topo-selos">
+    <span class="topo-selo">✅ GRATUITO</span>
+    <span class="topo-selo">📋 REGRAS 2025</span>
+    <span class="topo-selo">🔒 SEM CADASTRO</span>
+  </div>
+</div>
+
+<div class="pg">
+
+  <!-- ══ PASSO 1: RENDA ══════════════════════════════════════════ -->
+  <div class="bloco">
+    <div class="bloco-cab azul">
+      <div class="num-passo azul">1</div>
+      <div>
+        <div class="bloco-cab-titulo">💵 QUAL É A RENDA DA SUA FAMÍLIA?</div>
+        <div class="bloco-cab-dica">INFORME A RENDA OU MARQUE QUE NÃO TEM</div>
+      </div>
+    </div>
+    <div class="bloco-corpo">
+
+      <!-- Botão SEM RENDA -->
+      <button class="btn-sem-renda" id="btn-sem-renda" onclick="toggleSemRenda()" type="button">
+        <div class="bsr-check" id="bsr-check">☐</div>
+        <div class="bsr-texto">
+          <div class="bsr-titulo">❌ MINHA FAMÍLIA NÃO TEM RENDA</div>
+          <div class="bsr-desc">CLIQUE AQUI SE NINGUÉM NA CASA RECEBE DINHEIRO</div>
+        </div>
+      </button>
+
+      <!-- Divisor OU -->
+      <div class="divisor-ou">
+        <div class="divisor-linha"></div>
+        <div class="divisor-txt">OU</div>
+        <div class="divisor-linha"></div>
+      </div>
+
+      <!-- Input renda -->
+      <div class="label-campo">💰 INFORME A RENDA MENSAL TOTAL:</div>
+      <div class="input-renda-wrap" id="wrap-renda">
+        <div class="input-rs">R$</div>
+        <input type="number" id="renda" placeholder="0" min="0" step="50"
+               inputmode="numeric" oninput="onRendaDigitou()">
+      </div>
+
+      <div class="dica-renda">
+        <p>📌 <strong>O QUE INCLUIR?</strong> SALÁRIO, APOSENTADORIA, PENSÃO, BICO, TRABALHO INFORMAL — <strong>TUDO QUE ENTRA NA CASA POR MÊS.</strong></p>
+      </div>
+
+      <!-- RPC badge -->
+      <div class="rpc-badge" id="rpc-badge">
+        <div class="rpc-ico" id="rpc-ico">🧮</div>
+        <div>
+          <div class="rpc-rot">RENDA POR PESSOA DA FAMÍLIA</div>
+          <div class="rpc-val" id="rpc-val">—</div>
+          <div class="rpc-msg" id="rpc-msg">—</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ══ PASSO 2: FAMÍLIA ════════════════════════════════════════ -->
+  <div class="bloco">
+    <div class="bloco-cab azul">
+      <div class="num-passo azul">2</div>
+      <div>
+        <div class="bloco-cab-titulo">👨‍👩‍👧‍👦 QUEM MORA NA SUA CASA?</div>
+        <div class="bloco-cab-dica">USE OS BOTÕES + E − PARA CONTAR CADA PESSOA</div>
+      </div>
+    </div>
+    <div class="bloco-corpo">
+
+      <div class="membro ativo" id="mem-adulto">
+        <div class="mem-emoji">🧑</div>
+        <div class="mem-info">
+          <div class="mem-nome">ADULTOS</div>
+          <div class="mem-valor">18 ANOS OU MAIS &nbsp;•&nbsp; R$ 142 CADA</div>
+        </div>
+        <div class="ctr">
+          <button class="ctr-btn" onclick="alterar('adulto',-1)">−</button>
+          <span class="ctr-num" id="cnt-adulto">1</span>
+          <button class="ctr-btn" onclick="alterar('adulto',1)">+</button>
+        </div>
+      </div>
+
+      <div class="membro" id="mem-crianca6">
+        <div class="mem-emoji">🍼</div>
+        <div class="mem-info">
+          <div class="mem-nome">CRIANÇAS DE 0 A 6 ANOS</div>
+          <div class="mem-valor">R$ 142 (BRC) + R$ 150 (BPI) = R$ 292 CADA</div>
+        </div>
+        <div class="ctr">
+          <button class="ctr-btn" onclick="alterar('crianca6',-1)">−</button>
+          <span class="ctr-num" id="cnt-crianca6">0</span>
+          <button class="ctr-btn" onclick="alterar('crianca6',1)">+</button>
+        </div>
+      </div>
+
+      <div class="membro" id="mem-adolescente">
+        <div class="mem-emoji">🎒</div>
+        <div class="mem-info">
+          <div class="mem-nome">CRIANÇAS E JOVENS 7 A 17 ANOS</div>
+          <div class="mem-valor">R$ 142 (BRC) + R$ 50 (BVF) = R$ 192 CADA</div>
+        </div>
+        <div class="ctr">
+          <button class="ctr-btn" onclick="alterar('adolescente',-1)">−</button>
+          <span class="ctr-num" id="cnt-adolescente">0</span>
+          <button class="ctr-btn" onclick="alterar('adolescente',1)">+</button>
+        </div>
+      </div>
+
+      <div class="membro" id="mem-gestante">
+        <div class="mem-emoji">🤰</div>
+        <div class="mem-info">
+          <div class="mem-nome">GESTANTE</div>
+          <div class="mem-valor">R$ 142 (BRC) + R$ 50 (BVF) = R$ 192 CADA</div>
+        </div>
+        <div class="ctr">
+          <button class="ctr-btn" onclick="alterar('gestante',-1)">−</button>
+          <span class="ctr-num" id="cnt-gestante">0</span>
+          <button class="ctr-btn" onclick="alterar('gestante',1)">+</button>
+        </div>
+      </div>
+
+      <div class="total-casa">
+        <div class="tc-label">👥 TOTAL DE PESSOAS NA CASA:</div>
+        <div class="tc-num" id="total-pessoas">1</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══ PASSO 3: RESULTADO ══════════════════════════════════════ -->
+  <div class="bloco bloco-resultado">
+    <div class="bloco-cab verde">
+      <div class="num-passo verde">3</div>
+      <div>
+        <div class="bloco-cab-titulo">📊 RESULTADO</div>
+        <div class="bloco-cab-dica">CALCULADO AUTOMATICAMENTE ENQUANTO VOCÊ PREENCHE</div>
+      </div>
+    </div>
+    <div class="bloco-corpo">
+
+      <div id="estado-vazio">
+        <span class="ev-ico">👆</span>
+        <div class="ev-titulo">PREENCHA OS DADOS ACIMA</div>
+        <div class="ev-desc">O RESULTADO APARECE AQUI AUTOMATICAMENTE</div>
+      </div>
+
+      <div id="area-resultado" style="display:none">
+
+        <div class="banner espera aparecer" id="banner">
+          <div class="ban-ico" id="ban-ico">📋</div>
+          <div>
+            <div class="ban-titulo" id="ban-titulo">—</div>
+            <div class="ban-desc"   id="ban-desc">—</div>
+          </div>
+        </div>
+
+        <div id="area-detalhe" style="display:none">
+
+          <div class="card-comp aparecer">
+            <div class="comp-cab">
+              <div class="comp-cab-titulo">📋 COMO É CALCULADO O BENEFÍCIO</div>
+              <span class="comp-cab-tag" id="comp-tag">—</span>
+            </div>
+            <div id="linhas"></div>
+            <div class="total-grande">
+              <div>
+                <div class="tg-label">💰 VALOR TOTAL DO BENEFÍCIO</div>
+                <div class="tg-nota" id="tg-nota">—</div>
+              </div>
+              <div class="tg-valor" id="tg-valor">R$ 0</div>
+            </div>
+          </div>
+
+          <div class="barra-visual aparecer" id="barra-visual" style="display:none">
+            <div class="bv-titulo">📊 DE ONDE VEM CADA PARTE</div>
+            <div id="bv-conteudo"></div>
+          </div>
+
+          <div class="cond-bloco aparecer">
+            <div class="cond-titulo">✅ O QUE VOCÊ PRECISA FAZER PARA RECEBER</div>
+            <div id="cond-lista"></div>
+          </div>
+
+          <div class="aviso aparecer">
+            <div class="aviso-ico">⚠️</div>
+            <div class="aviso-txt">
+              <strong>ATENÇÃO: ESTE É UM VALOR ESTIMADO.</strong><br>
+              O VALOR OFICIAL É CALCULADO PELO GOVERNO COM BASE NO SEU <strong>CADÚNICO</strong>.<br>
+              PROCURE O <strong>CRAS</strong> DO SEU MUNICÍPIO PARA SE CADASTRAR OU ATUALIZAR SEU CADASTRO.
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</div><!-- /pg -->
+
+<script>
+// ── Constantes ──────────────────────────────────────────────────────
+const BRC_UNIT = 142;
+const BPI_UNIT = 150;
+const BVF_UNIT = 50;
+const MINIMO   = 600;   // piso garantido: aplica-se SOMENTE ao BRC
+const LIM_RPC  = 218;
+
+// ── Estado ──────────────────────────────────────────────────────────
+const fam = { adulto:1, crianca6:0, adolescente:0, gestante:0 };
+let semRenda = false;
+
+// ── Helpers ─────────────────────────────────────────────────────────
+const totalP = () => fam.adulto + fam.crianca6 + fam.adolescente + fam.gestante;
+const fmt    = v => v.toLocaleString('pt-BR', { minimumFractionDigits:2, maximumFractionDigits:2 });
+const fmtR   = v => 'R$ ' + fmt(v);
+const el     = id => document.getElementById(id);
+
+// ── Toggle "Sem Renda" ───────────────────────────────────────────────
+function toggleSemRenda() {
+  semRenda = !semRenda;
+  const btn  = el('btn-sem-renda');
+  const chk  = el('bsr-check');
+  const wrap = el('wrap-renda');
+  const inp  = el('renda');
+
+  if (semRenda) {
+    btn.classList.add('marcado');
+    chk.textContent = '✓';
+    wrap.classList.add('bloqueado');
+    inp.value = '';
+    inp.disabled = true;
+  } else {
+    btn.classList.remove('marcado');
+    chk.textContent = '☐';
+    wrap.classList.remove('bloqueado');
+    inp.disabled = false;
+  }
+  calcular();
+}
+
+// ── Digitou renda manualmente ────────────────────────────────────────
+function onRendaDigitou() {
+  // Se digitar renda, desmarca "sem renda" automaticamente
+  if (semRenda) {
+    semRenda = false;
+    el('btn-sem-renda').classList.remove('marcado');
+    el('bsr-check').textContent = '☐';
+    el('wrap-renda').classList.remove('bloqueado');
+    el('renda').disabled = false;
+  }
+  calcular();
+}
+
+// ── Contadores de membros ────────────────────────────────────────────
+function alterar(tipo, delta) {
+  fam[tipo] = Math.max(0, fam[tipo] + delta);
+  if (totalP() === 0) fam.adulto = 1;
+  el('cnt-' + tipo).textContent = fam[tipo];
+  ['adulto','crianca6','adolescente','gestante'].forEach(t => {
+    el('mem-' + t).classList.toggle('ativo', fam[t] > 0);
+  });
+  calcular();
+}
+
+// ── CÁLCULO PRINCIPAL ────────────────────────────────────────────────
+function calcular() {
+  const nPess = totalP();
+  el('total-pessoas').textContent = nPess;
+
+  // Determina a renda efetiva
+  const rendaDigitada = parseFloat(el('renda').value) || 0;
+  const renda = semRenda ? 0 : rendaDigitada;
+
+  // Só entra no cálculo se "sem renda" foi marcado OU um valor foi digitado
+  const prontoParaCalcular = semRenda || rendaDigitada > 0;
+
+  // ── RPC badge ────────────────────────────────────────────────────
+  const badge = el('rpc-badge');
+  if (prontoParaCalcular) {
+    badge.style.display = 'flex';
+    const rpc = nPess > 0 ? renda / nPess : 0;
+
+    if (semRenda) {
+      badge.className = 'rpc-badge zero';
+      el('rpc-ico').textContent = '✅';
+      el('rpc-val').textContent = 'R$ 0,00 — SEM RENDA';
+      el('rpc-msg').textContent = 'SEM RENDA DECLARADA — DENTRO DO LIMITE. PODE TER DIREITO!';
+    } else {
+      el('rpc-val').textContent = fmtR(rpc) + ' POR PESSOA';
+      if (rpc <= LIM_RPC) {
+        badge.className = 'rpc-badge ok';
+        el('rpc-ico').textContent = '✅';
+        el('rpc-msg').textContent = 'DENTRO DO LIMITE DE R$ 218,00 — PODE TER DIREITO!';
+      } else {
+        badge.className = 'rpc-badge nao';
+        el('rpc-ico').textContent = '❌';
+        el('rpc-msg').textContent = 'ACIMA DO LIMITE DE R$ 218,00 — SEM DIREITO AO BENEFÍCIO';
+      }
+    }
+  } else {
+    badge.style.display = 'none';
+  }
+
+  // ── Exibição da área de resultado ───────────────────────────────
+  if (!prontoParaCalcular) {
+    el('estado-vazio').style.display   = 'block';
+    el('area-resultado').style.display = 'none';
+    return;
+  }
+  el('estado-vazio').style.display   = 'none';
+  el('area-resultado').style.display = 'block';
+
+  const rpc = nPess > 0 ? renda / nPess : 0;
+
+  // ── Não elegível ─────────────────────────────────────────────────
+  if (!semRenda && rpc > LIM_RPC) {
+    el('banner').className = 'banner nao aparecer';
+    el('ban-ico').textContent    = '❌';
+    el('ban-titulo').textContent = 'SUA FAMÍLIA NÃO TEM DIREITO AO BENEFÍCIO AGORA';
+    el('ban-desc').innerHTML =
+      `A RENDA POR PESSOA É <strong>${fmtR(rpc)}</strong>, ACIMA DO LIMITE DE <strong>R$ 218,00/PESSOA</strong>.<br>
+       PARA <strong>${nPess} PESSOA(S)</strong>, A RENDA TOTAL DEVERIA SER ATÉ <strong>${fmtR(LIM_RPC * nPess)}</strong>.`;
+    el('area-detalhe').style.display = 'none';
+    return;
+  }
+
+  // ── Elegível ─────────────────────────────────────────────────────
+  el('banner').className = 'banner ok aparecer';
+  el('ban-ico').textContent    = '🎉';
+  el('ban-titulo').textContent = semRenda
+    ? 'SEM RENDA — SUA FAMÍLIA PODE TER DIREITO AO BOLSA FAMÍLIA!'
+    : 'SUA FAMÍLIA PODE TER DIREITO AO BOLSA FAMÍLIA!';
+  el('ban-desc').innerHTML = semRenda
+    ? `FAMÍLIA SEM RENDA DECLARADA — DENTRO DO CRITÉRIO DE ELEGIBILIDADE.<br>VEJA ABAIXO O VALOR ESTIMADO DO BENEFÍCIO.`
+    : `RENDA POR PESSOA: <strong>${fmtR(rpc)}</strong> — DENTRO DO LIMITE DE R$ 218,00.<br>VEJA ABAIXO O VALOR ESTIMADO DO BENEFÍCIO.`;
+  el('area-detalhe').style.display = 'block';
+
+  // ────────────────────────────────────────────────────────────────
+  // LÓGICA DE CÁLCULO:
+  //  1) BRC  = R$ 142 × nº de pessoas
+  //  2) COMP = se BRC < R$ 600 → diferença para completar R$ 600
+  //            se BRC >= R$ 600 → COMP = 0 (não é necessário)
+  //  3) BPI  = R$ 150 × crianças 0–6 anos  (somado POR CIMA do mínimo)
+  //  4) BVF  = R$ 50  × (jovens 7–17 + gestantes) (somado POR CIMA)
+  //  TOTAL   = BRC + COMP + BPI + BVF
+  // ────────────────────────────────────────────────────────────────
+  const valBRC  = nPess * BRC_UNIT;
+  const valCOMP = valBRC < MINIMO ? MINIMO - valBRC : 0;
+  const valBPI  = fam.crianca6 * BPI_UNIT;
+  const nBVF    = fam.adolescente + fam.gestante;
+  const valBVF  = nBVF * BVF_UNIT;
+  const total   = valBRC + valCOMP + valBPI + valBVF;
+
+  // ── Monta linhas ─────────────────────────────────────────────────
+  let html = '';
+
+  // Linha BRC
+  html += linhaHTML('🏠','#E8F0FB',
+    'RENDA DE CIDADANIA (BRC)',
+    `R$ 142 × ${nPess} PESSOA(S) NA CASA`,
+    valBRC, '');
+
+  // Complementar (só se BRC < 600)
+  if (valCOMP > 0) {
+    html += `<div class="subtotal-linha">
+      <span class="subtotal-txt">BRC (${fmtR(valBRC)}) É MENOR QUE R$ 600,00</span>
+      <span class="subtotal-val">↓ COMPLETA</span>
+    </div>`;
+    html += linhaHTML('➕','#E3F4F1',
+      'BENEFÍCIO COMPLEMENTAR',
+      `COMPLETA OS ${fmtR(valBRC)} ATÉ O MÍNIMO DE R$ 600,00`,
+      valCOMP, 'comp-cor');
+  }
+
+  // Separador antes dos variáveis
+  if (valBPI > 0 || valBVF > 0) {
+    html += `<div class="sep-variavel">
+      <div class="sep-linha"></div>
+      <div class="sep-txt">✚ MAIS BENEFÍCIOS VARIÁVEIS</div>
+      <div class="sep-linha"></div>
+    </div>`;
+  }
+
+  // BPI
+  if (valBPI > 0) {
+    html += linhaHTML('🍼','#E6F5EE',
+      'BENEFÍCIO PRIMEIRA INFÂNCIA (BPI)',
+      `R$ 150 × ${fam.crianca6} CRIANÇA(S) DE 0 A 6 ANOS`,
+      valBPI, '');
+  }
+
+  // BVF
+  if (valBVF > 0) {
+    const partes = [];
+    if (fam.adolescente > 0) partes.push(`${fam.adolescente} JOVEM(NS) 7–17 ANOS`);
+    if (fam.gestante    > 0) partes.push(`${fam.gestante} GESTANTE(S)`);
+    html += linhaHTML('🎒','#FEF0E0',
+      'BENEFÍCIO VARIÁVEL FAMILIAR (BVF)',
+      `R$ 50 × ` + partes.join(' + '),
+      valBVF, '');
+  }
+
+  el('linhas').innerHTML = html;
+  el('tg-valor').textContent = fmtR(total);
+  el('comp-tag').textContent = fmtR(total);
+
+  let nota = '';
+  if (valCOMP > 0 && (valBPI > 0 || valBVF > 0)) {
+    nota = 'MÍNIMO GARANTIDO (R$ 600,00) + BENEFÍCIOS VARIÁVEIS';
+  } else if (valCOMP > 0) {
+    nota = 'BRC + COMPLEMENTAR = MÍNIMO GARANTIDO DE R$ 600,00';
+  } else {
+    nota = 'BRC ULTRAPASSA R$ 600,00 — SEM NECESSIDADE DE COMPLEMENTAR';
+  }
+  el('tg-nota').textContent = nota;
+
+  // ── Barra visual ─────────────────────────────────────────────────
+  const graf = [];
+  graf.push({ ico:'🏠', nome:'BRC',         val:valBRC,  cor:'#1155BB' });
+  if (valCOMP > 0) graf.push({ ico:'➕', nome:'COMPLEMENTAR', val:valCOMP, cor:'#1A6B5E' });
+  if (valBPI  > 0) graf.push({ ico:'🍼', nome:'BPI',          val:valBPI,  cor:'#1A7A4A' });
+  if (valBVF  > 0) graf.push({ ico:'🎒', nome:'BVF',          val:valBVF,  cor:'#D06010' });
+
+  if (graf.length > 1) {
+    el('barra-visual').style.display = 'block';
+    el('bv-conteudo').innerHTML = graf.map(it => {
+      const pct = Math.round((it.val / total) * 100);
+      return `<div class="bv-row">
+        <div class="bv-ico">${it.ico}</div>
+        <div class="bv-label">${it.nome}</div>
+        <div class="bv-track">
+          <div class="bv-fill" style="width:${pct}%;background:${it.cor}">
+            ${pct >= 14 ? fmtR(it.val) : ''}
+          </div>
+        </div>
+        <div class="bv-pct">${pct}%</div>
+      </div>`;
+    }).join('');
+  } else {
+    el('barra-visual').style.display = 'none';
+  }
+
+  // ── Condicionalidades ─────────────────────────────────────────────
+  const conds = [
+    { ico:'📋', txt:`ESTAR INSCRITO NO <strong>CADÚNICO</strong> COM OS DADOS ATUALIZADOS NO CRAS.` },
+    { ico:'💰', txt:`RENDA POR PESSOA ATÉ <strong>R$ 218,00 POR MÊS</strong> (FAMÍLIAS SEM RENDA SE ENQUADRAM AUTOMATICAMENTE).` },
+  ];
+  if (fam.crianca6 > 0 || fam.adolescente > 0) {
+    conds.push({ ico:'🏫', txt:`<strong>CRIANÇAS E JOVENS NA ESCOLA</strong> — FREQUÊNCIA MÍNIMA DE 60% (FUNDAMENTAL) E 75% (MÉDIO).` });
+    conds.push({ ico:'💉', txt:`<strong>VACINAS EM DIA</strong> E ACOMPANHAMENTO DE SAÚDE DAS CRIANÇAS NA UNIDADE DE SAÚDE.` });
+  }
+  if (fam.gestante > 0)
+    conds.push({ ico:'🏥', txt:`<strong>CONSULTAS DE PRÉ-NATAL EM DIA</strong> PARA A GESTANTE.` });
+  conds.push({ ico:'👩', txt:`RESPONSÁVEL FAMILIAR COM <strong>MAIS DE 16 ANOS</strong>, PREFERENCIALMENTE A <strong>MÃE</strong>.` });
+
+  el('cond-lista').innerHTML = conds.map(c =>
+    `<div class="cond-item">
+       <div class="cond-ico">${c.ico}</div>
+       <div class="cond-txt">${c.txt}</div>
+     </div>`).join('');
+}
+
+function linhaHTML(ico, bg, nome, desc, valor, cls) {
+  return `<div class="linha">
+    <div class="linha-ico" style="background:${bg}">${ico}</div>
+    <div class="linha-centro">
+      <div class="linha-nome">${nome}</div>
+      <div class="linha-desc">${desc}</div>
+    </div>
+    <div class="linha-valor ${cls}">${fmtR(valor)}</div>
+  </div>`;
+}
+
+// Init
+calcular();
+</script>
+</body>
+</html>
